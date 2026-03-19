@@ -19,21 +19,6 @@ namespace Timecode4net
             };
         }
 
-        public static long ToLong(this FrameRate frameRate)
-        {
-            return frameRate switch
-            {
-                FrameRate.fps23_98 or FrameRate.fps24 => 24l,
-                FrameRate.fps25 => 25l,
-                FrameRate.fps29_97 or FrameRate.fps30 => 30l,
-                FrameRate.fps48 => 48l,
-                FrameRate.fps50 => 50l,
-                FrameRate.fps59_94 or FrameRate.fps60 => 60l,
-                FrameRate.msec => 1000l,
-                _ => throw new ArgumentOutOfRangeException(nameof(frameRate), frameRate, null)
-            };
-        }
-
         public static double ToDouble(this FrameRate frameRate)
         {
             return frameRate switch
