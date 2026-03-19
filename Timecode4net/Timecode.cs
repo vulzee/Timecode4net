@@ -79,6 +79,8 @@ namespace Timecode4net
 
         private readonly int _frameRate;
 
+        public FrameRate FrameRate => _rawFrameRate;
+
         public int TotalFrames { get; private set; }
     
         public int Hours { get; private set; }
