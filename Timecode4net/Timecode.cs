@@ -111,7 +111,7 @@ namespace Timecode4net
 
         public TimeSpan ToTimeSpan()
         {
-            var framesInMsec = this.TotalFrames * FrameRate.msec.ToInt() / this._rawFrameRate.ToDouble();
+            var framesInMsec = this.TotalFrames * FrameRate.msec.ToLong() / this._rawFrameRate.ToDouble();
             return TimeSpan.FromMilliseconds(framesInMsec);
         }
 
