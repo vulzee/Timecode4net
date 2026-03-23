@@ -32,7 +32,7 @@ namespace Timecode4net
                 FrameRate.fps50 => 50,
                 FrameRate.fps59_94 => 60000 / 1001d,
                 FrameRate.fps60 => 60,
-                FrameRate.msec => 1,
+                FrameRate.msec => 1000,
                 _ => throw new ArgumentOutOfRangeException(nameof(frameRate), frameRate, null)
             };
         }
